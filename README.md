@@ -27,3 +27,29 @@ Options are displayed to users in a dialog box format. Once the user makes their
 Be cautious and thoroughly evaluate scripts and automation tasks obtained from external sources. <a href="https://github.com/tteck/Proxmox/blob/main/CODE-AUDIT.md">Read more</a>
 </p>
 <sub><div align="center"> Proxmox® is a registered trademark of Proxmox Server Solutions GmbH. </div></sub>
+
+## Ansible Script
+
+A minimal Ansible playbook is provided in `ansible/run_script.yml`. The playbook
+executes a specified script and allows optional environment variables. Run it
+like so:
+
+```bash
+ansible-playbook ansible/run_script.yml -e "script=ct/actualbudget.sh"
+```
+
+## Homebrew Formula
+
+A Homebrew formula is included at `homebrew/Formula/proxmox-helper-scripts.rb`.
+Install the scripts using:
+
+```bash
+brew install --HEAD ./homebrew/Formula/proxmox-helper-scripts.rb
+```
+
+## GitHub Actions
+
+Releases are automatically created when tags matching `v*` are pushed. This
+workflow runs for tags created from any branch.
+
+

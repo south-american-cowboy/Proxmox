@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  gather_facts: false
+  vars:
+    script: ""
+    env_vars: {}
+  tasks:
+    - name: Ensure script variable is provided
+      assert:
+        that: script != ""
+        fail_msg: "No script path provided. Use -e 'script=path/to/script.sh'"
+    - name: Run specified script
+      shell: "{{ script }}"
+      environment: "{{ env_vars }}"
+      args:
+        executable: /bin/bash
