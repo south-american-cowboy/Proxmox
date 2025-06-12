@@ -38,13 +38,20 @@ like so:
 ansible-playbook ansible/run_script.yml -e "script=ct/actualbudget.sh"
 ```
 
-## Homebrew Formula
+## Homebrew Tap
 
-A Homebrew formula is included at `homebrew/Formula/proxmox-helper-scripts.rb`.
-Install the scripts using:
+This repository can be used as a Homebrew tap containing a formula that
+installs all available scripts.
 
 ```bash
-brew install --HEAD ./homebrew/Formula/proxmox-helper-scripts.rb
+brew tap south-american-cowboy/proxmox https://github.com/south-american-cowboy/Proxmox.git
+brew install proxmox-helper-scripts
+```
+
+If preferred, you can still install directly from the formula file:
+
+```bash
+brew install --HEAD ./Formula/proxmox-helper-scripts.rb
 ```
 
 ## GitHub Actions
