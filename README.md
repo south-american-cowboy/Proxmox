@@ -45,7 +45,7 @@ installs all available scripts.
 
 ```bash
 brew tap south-american-cowboy/proxmox https://github.com/south-american-cowboy/Proxmox.git
-brew install proxmox-helper-scripts
+brew install --HEAD proxmox-helper-scripts
 ```
 
 If preferred, you can still install directly from the formula file:
