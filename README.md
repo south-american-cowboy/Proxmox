@@ -56,7 +56,9 @@ brew install --HEAD ./Formula/proxmox-helper-scripts.rb
 
 ## GitHub Actions
 
-Releases are automatically created when tags matching `v*` are pushed. This
-workflow runs for tags created from any branch.
+Releases are automatically created on every push to any branch. Each release
+includes the branch name and uses the version format `v.yy.ddd.N`, where `yy`
+is the two-digit year, `ddd` is the day of the year, and `N` is the commit
+number.
 
 
