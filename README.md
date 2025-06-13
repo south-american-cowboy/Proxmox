@@ -22,6 +22,19 @@
 
 These scripts empower users to create a Linux container or virtual machine interactively, providing choices for both simple and advanced configurations. The basic setup adheres to default settings, while the advanced setup gives users the ability to customize these defaults.
 
+### Generating Release Names
+
+Use the `misc/generate_release_name.sh` script to create release tags that follow
+the format `project_branch_v1.0.YY.DDD.COMMIT`. The script automatically pulls
+the project and branch names from your local Git repository and appends the
+current year, day of year, and commit count to build the release identifier.
+
+```bash
+./misc/generate_release_name.sh [project_name] [branch_name] [version_prefix]
+```
+
+If no arguments are provided, defaults are detected from the repository.
+
 Options are displayed to users in a dialog box format. Once the user makes their selections, the script collects and validates their input to generate the final configuration for the container or virtual machine.
 <p align="center">
 Be cautious and thoroughly evaluate scripts and automation tasks obtained from external sources. <a href="https://github.com/tteck/Proxmox/blob/main/CODE-AUDIT.md">Read more</a>
