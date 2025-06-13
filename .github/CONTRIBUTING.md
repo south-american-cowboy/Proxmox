@@ -12,3 +12,5 @@ Everybody is invited and welcome to contribute to Proxmox VE Helper Scripts.
 - It is important to stress that complaining about a decision after it has been made is not productive behavior for the pull request submitter. It is crucial for all contributors to respect the decision-making process and collaborate effectively towards achieving the best possible outcome for the project.
 
 - The repository will only accept Alpine applications that make use of the Alpine Package Keeper.
+
+- When opening a pull request, provide a concise summary of the changes and reference any related issue using the `Fixes #<issue-number>` notation. Please use the [pull request template](pull_request_template.md) so that reviewers have all the necessary information.
